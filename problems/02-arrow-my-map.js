@@ -1,7 +1,7 @@
 /***********************************************************************
 Write a function using fat arrow syntax named `arrowMyMap` that accepts an array
 and a callback as arguments. The function will return an array of new elements
-obtained by calling the callback on each element of the array, passing in the 
+obtained by calling the callback on each element of the array, passing in the
 element. Assign the below function to a variable using the const keyword.
 
 Do not use the built in Array.map - use Array.forEach for iteration.
@@ -18,8 +18,17 @@ console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 
 ***********************************************************************/
 
-const arrowMyMap = (array, cb) => {
+const arrowMyMap = (A, cb) => {
   // Your code here
+
+  let ret=[];
+
+  for(let i=0;i<A.length;i++)
+  {
+    ret.push(cb(A[i],i,A));
+  }
+
+  return(ret);
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

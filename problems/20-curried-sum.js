@@ -42,7 +42,24 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   be useful
 ***********************************************************************/
 
-function curriedSum(numArgs) {
+function curriedSum(nA) {
+
+  let ret=0;
+  let n=nA;
+
+  let Sum = function(num)
+  {
+      if(n==0) return ret;
+      else{
+        n--;
+        ret+=num;
+        if(n==0) return ret;
+      }
+
+      return Sum
+  }
+
+  return Sum;
   // Your code here
 }
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

@@ -15,9 +15,29 @@ console.log(fame(["a", "f", "z", "b"])); // returns [ 'f', 'a' ]
 
 *******************************************************************************/
 
-function plannedIntersect(firstArr) {
+function plannedIntersect(fA) {
+
+  let Intersect = function(sA)
+  {
+
+    let ret=[];
+
+    for(let i=0;i<sA.length;i++)
+    {
+       if(fA.indexOf(sA[i])!=-1) ret.push(sA[i]);
+    }
+
+    return(ret);
+
+  }
+
+  return Intersect
   // Your code here
 }
+
+//let abc = plannedIntersect(["a", "b", "c"]); // returns a function
+//console.log(abc(["b", "d", "c"])); // returns [ 'b', 'c' ]
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 try {

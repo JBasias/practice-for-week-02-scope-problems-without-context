@@ -10,10 +10,18 @@ arrowAvgValue([2, 3, 7]); // => 4
 arrowAvgValue([100, 60, 64]); // => 74.66666666666667
 ***********************************************************************/
 
-const arrowAvgValue = array => {
-  // Your code here
+const arrowAvgValue = A => {
+  let ret=0.0;
+  for(let i=0;i<A.length;i++)
+  {
+    ret+=A[i];
+  }
+
+  return ret/A.length;
 };
 
+
+//console.log(arrowAvgValue([100, 60, 64]));
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = arrowAvgValue;

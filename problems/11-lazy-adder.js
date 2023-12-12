@@ -22,10 +22,34 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   fat-arrow function
 ***********************************************************************/
 
-function lazyAdder(firstNum) {
+function lazyAdder(fN) {
+
+  let num=fN;
+
+  let lazy1= function(sN)
+  {
+
+    let ret=num+sN;
+
+    function lazy2(sN)
+    {
+      return ret+sN;
+    }
+
+    return lazy2
+
+  }
+
+  return lazy1;
   // Your code here
 }
 
+/*
+let func1 = lazyAdder(10);
+let func2 = func1(20);
+let total = func2(3);
+console.log(total); // prints 33
+*/
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = lazyAdder;

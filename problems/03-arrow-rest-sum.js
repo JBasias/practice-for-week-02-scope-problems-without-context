@@ -10,7 +10,16 @@ arrowRestSum(1, 2, 3, 4, 5, 6, 7, 8, 9); // => 45
 arrowRestSum(0); // => 0
 ***********************************************************************/
 
-const arrowRestSum = (...otherNums) => {
+const arrowRestSum = (...oN) => {
+
+  let ret=0;
+  for(let i=0;i<oN.length;i++)
+  {
+    ret+=oN[i];
+  }
+
+  return ret;
+
   // Your code here
 };
 

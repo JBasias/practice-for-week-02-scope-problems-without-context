@@ -1,6 +1,6 @@
 /***********************************************************************
 Write a function reverseStr(str) that accepts a string and returns that string
-reversed. 
+reversed.
 
 Write this function using a fat arrow function!
 
@@ -11,6 +11,8 @@ let result3 = reverseStr("potato"); // returns "otatop"
 
 
 ***********************************************************************/
+
+let reverseStr = str => str.split("").reverse().join("");
 
 // Your code here
 
